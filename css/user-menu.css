@@ -1,0 +1,82 @@
+/* User Menu Dropdown Styles - Native to Website */
+.user-menu-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-menu-button {
+  padding: 8px 16px !important;
+  min-width: auto !important;
+}
+
+.menu-icon {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.user-menu-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background-color: #1a1a1a;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+  z-index: 1000;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 102, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Keep menu open when dropdown is active (click-based interaction) */
+.user-menu-dropdown.active .user-menu-dropdown-content {
+  display: block;
+}
+
+/* Also allow hover for better UX */
+.user-menu-dropdown:hover .user-menu-dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 102, 0, 0.15);
+  color: #ff6600;
+}
+
+.logout-btn {
+  background: none !important;
+  border: none !important;
+  width: 100%;
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  font-family: inherit;
+}
+
+.logout-btn:hover {
+  background-color: rgba(255, 102, 0, 0.15) !important;
+  color: #ff6600 !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .user-menu-dropdown-content {
+    right: -20px;
+  }
+}
